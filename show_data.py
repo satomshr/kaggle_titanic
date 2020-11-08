@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 train_data = pd.read_csv("train.csv")
 test_data = pd.read_csv("test.csv")
 
+train_data.describe()
+test_data.describe()
+
 # https://www.codexa.net/kaggle-titanic-beginner/
 def kesson_table(df):
         null_val = df.isnull().sum()
@@ -30,6 +33,34 @@ male_female_survived.loc['Male', 'Not survived'] = len(train_data_male[train_dat
 male_female_survived.loc['Female', 'Survived'] = len(train_data_female[train_data_female["Survived"]==1])
 male_female_survived.loc['Female', 'Not survived'] = len(train_data_female[train_data_female["Survived"]==0])
 # https://qiita.com/ynakayama/items/9979258ac68cb669757a
-male_female_survived.plot(kind='bar', stacked=True)
-plt.grid()
-plt.savefig("sex.svg")
+# male_female_survived.plot(kind='bar', stacked=True)
+# plt.grid()
+# plt.savefig("sex.svg")
+
+# Age
+male0 = train_data_male[train_data_male["Survived"]==0]
+male1 = train_data_male[train_data_male["Survived"]==1]
+female0 = train_data_female[train_data_female["Survived"]==0]
+female1 = train_data_female[train_data_female["Survived"]==1]
+
+figure, (Left, Right) = plt.subplots(ncols=2, figsize=(10, 5))
+
+Left.hist([male1['Age'].dropna(), male0['Age'].dropna()], label=['Survived', 'Not survived'],
+    stacked=True)
+Left.legend()
+Left.set_xlim(0, 100)
+Left.set_ylim(0, 120)
+Left.grid(True)
+Left.set_title("Male")
+Left.set_xlabel("Age")
+
+Right.hist([female1['Age'].dropna(), female0['Age'].dropna()], label=['Survived', 'Not survived'],
+    stacked=True)
+Right.legend()
+Right.set_xlim(0, 100)
+Right.set_ylim(0, 120)
+Right.grid(True)
+Right.set_title("Female")
+Right.set_xlabel("Age")
+
+figure.savefig("age.svg")
