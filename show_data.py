@@ -43,24 +43,24 @@ male1 = train_data_male[train_data_male["Survived"]==1]
 female0 = train_data_female[train_data_female["Survived"]==0]
 female1 = train_data_female[train_data_female["Survived"]==1]
 
-figure, (Left, Right) = plt.subplots(ncols=2, figsize=(10, 5))
-
-Left.hist([male1['Age'].dropna(), male0['Age'].dropna()], label=['Survived', 'Not survived'],
-    stacked=True)
-Left.legend()
-Left.set_xlim(0, 100)
-Left.set_ylim(0, 120)
-Left.grid(True)
-Left.set_title("Male")
-Left.set_xlabel("Age")
-
-Right.hist([female1['Age'].dropna(), female0['Age'].dropna()], label=['Survived', 'Not survived'],
-    stacked=True)
-Right.legend()
-Right.set_xlim(0, 100)
-Right.set_ylim(0, 120)
-Right.grid(True)
-Right.set_title("Female")
-Right.set_xlabel("Age")
-
-figure.savefig("age.svg")
+# figure, (Left, Right) = plt.subplots(ncols=2, figsize=(10, 5))
+#
+# Left.hist([male1['Age'].dropna(), male0['Age'].dropna()], label=['Survived', 'Not survived'],
+#     stacked=True)
+# Left.legend()
+# Left.set_xlim(0, 100)
+# Left.set_ylim(0, 120)
+# Left.grid(True)
+# Left.set_title("Male")
+# Left.set_xlabel("Age")
+#
+# Right.hist([female1['Age'].dropna(), female0['Age'].dropna()], label=['Survived', 'Not survived'],
+#     stacked=True)
+# Right.legend()
+# Right.set_xlim(0, 100)
+# Right.set_ylim(0, 120)
+# Right.grid(True)
+# Right.set_title("Female")
+# Right.set_xlabel("Age")
+#
+# figure.savefig("age.svg")
