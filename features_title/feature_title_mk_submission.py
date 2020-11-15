@@ -270,6 +270,73 @@ output.to_csv('my_submission1.csv', index=False)
 print("Your submission was successfully saved!")
 
 
+# In[32]:
+
+
+# remove Embarked, SibSp, Parch
+features = ["Pclass", "Sex", "Age", "Fare", "Title"]
+y = train_data["Survived"]
+X = pd.get_dummies(train_data[features])
+X_test = pd.get_dummies(test_data[features])
+
+model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=1, max_features="auto")
+model.fit(X, y)
+predictions = model.predict(X_test)
+
+
+# In[33]:
+
+
+print('Train score: {}'.format(model.score(X, y)))
+
+
+# In[34]:
+
+
+x_importance = pd.Series(data=model.feature_importances_, index=X.columns)
+x_importance.sort_values(ascending=False).plot.bar()
+
+
+# In[36]:
+
+
+# グリッドサーチ
+from sklearn.model_selection import GridSearchCV
+
+param_grid = {"max_depth": [2, 4, 6, 10, None],
+              "n_estimators":[1, 3, 10, 30, 100, 300],
+              "max_features":["auto", None, "log2"]}
+
+model_grid = GridSearchCV(estimator=RandomForestClassifier(random_state=1),
+                 param_grid = param_grid,   
+                 scoring="accuracy",  # metrics
+                 cv = 3,              # cross-validation
+                 n_jobs = 1)          # number of core
+
+model_grid.fit(X, y) #fit
+
+model_grid_best = model_grid.best_estimator_ # best estimator
+print("Best Model Parameter: ", model_grid.best_params_)
+
+
+# In[37]:
+
+
+print('Train score: {}'.format(model_grid_best.score(X, y)))
+
+
+# In[38]:
+
+
+predictions = model_grid_best.predict(X_test)
+
+output = pd.DataFrame({'PassengerId': test_data.PassengerId, 'Survived': predictions})
+output = output.astype({'Survived' : 'int64'})
+# output.info()
+output.to_csv('my_submission2.csv', index=False)
+print("Your submission was successfully saved!")
+
+
 # In[ ]:
 
 
