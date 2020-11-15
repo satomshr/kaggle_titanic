@@ -1,0 +1,23 @@
+Mr          757
+Miss        260
+Mrs         197
+Master       61
+Dr            8
+Rev           8
+Col           4
+Major         2
+Ms            2
+Mlle          2
+Jonkheer      1
+Countess      1
+Capt          1
+Mme           1
+Don           1
+Sir           1
+Lady          1
+Dona          1
+
+# Master は 15 歳未満の男性
+# Miss は高齢者もいる. 女性のみ
+# Dr は, 生死不明者が 1 名
+# Rev (牧師) は生死が分かっている 6 名は全員死亡
