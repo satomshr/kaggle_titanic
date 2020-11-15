@@ -14,10 +14,11 @@ Codes for Kaggle/Titanic
       - 上記のスクリプトを, submit 用のデータを作る用に改造
       - 「敬称」を考慮したら, 0.76794 に下がってしまった
       - 影響度を調べたら "Embarked" の影響が小さかったので, それを外してみたが変わらなかった
+      - さらに "SibSp" と "Parch" を外したけど, ダメだった
 
 - scripts
   - show_data.py ; draw some graphs
-  
+
 - graphs
   - sex.svg ; sex
   - age.svg ; age
