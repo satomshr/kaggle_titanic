@@ -4,7 +4,7 @@ Codes for Kaggle/Titanic
 - folders
   - tutorial ; see details of tutorial scripts
   - tutorial1 ; study the effects of parameters of RandomForestClassifier
-  - features1
+  - features0
     - features = ["Pclass", "Sex", "SibSp", "Parch", "Age", "Fare", "Embarked"]
     - RandomForestClassifier ; {'max_depth': 6, 'max_features': None, 'n_estimators': 30}
     - Score ; 0.77990 <- 0.77751
