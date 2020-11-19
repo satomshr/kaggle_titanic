@@ -15,6 +15,10 @@ Codes for Kaggle/Titanic
       - 「敬称」を考慮したら, 0.76794 に下がってしまった
       - 影響度を調べたら "Embarked" の影響が小さかったので, それを外してみたが変わらなかった
       - さらに "SibSp" と "Parch" を外したけど, ダメだった
+  - features_ticket ; check "Ticket"
+  - features_cabin ; check "Cabin"
+    - feature_cabin.py ; "Cabin" の記号ごとに生存率を調査. あまりパっとしなかった
+    - feature_cabin_cap.py ; "Cabin" の頭文字でグルーピング. 生存率の高い記号はあるが, あまりメリハリは無い
 
 - scripts
   - show_data.py ; draw some graphs
