@@ -28,6 +28,9 @@ Codes for Kaggle/Titanic
     - Name ; Name から敬称 "Title" を作り, 似たものでグルーピング
     - Age ; Pclass, SibSp, Parch, Sex, Title で RandomForestRegression で推定
     - Survived ; "Pclass", "Sex", "SibSp", "Parch", "Age", "Fare", "Embarked", "Cabin_Cap", "Title" で推定
+    - 結果
+      - 固定パラメタで RandomForestClassifier ; 0.77990
+      - グリッドサーチ ; 0.77511 (何故だ!)
 
 - scripts
   - show_data.py ; draw some graphs
