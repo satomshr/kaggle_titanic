@@ -31,6 +31,10 @@ Codes for Kaggle/Titanic
     - 結果
       - 固定パラメタで RandomForestClassifier ; 0.77990
       - グリッドサーチ ; 0.77511 (何故だ!)
+  - tutorial2/tutorial2a.ipynb
+    - cross_val_score のテスト
+  - tutorial2/tutorial2b.ipynb
+    - SelectKBest を使ってパラメタを絞り込んだ. score ; 0.77511
 
 - scripts
   - show_data.py ; draw some graphs
