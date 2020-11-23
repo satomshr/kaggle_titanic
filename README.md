@@ -44,9 +44,13 @@ Codes for Kaggle/Titanic
     - tutorial2c.ipynb から派生
     - Cabin と Embarked は元に戻す
     - 苦し紛れに, "Family_Size" = "SibSp" + "Parch" + 1 を特徴量として設定
-    - mysubmission2d.csv ; 0.78468 (2839 / 16829)
-    - mysubmission2d_cv3.csv ; 0.78468 (same as above)
-    - mysubmission2d_cv5.csv ; 0.78468 (same as above)
+    - my_submission2d.csv ; 0.78468 (2839 / 16829)
+    - my_submission2d_cv3.csv ; 0.78468 (same as above)
+    - my_submission2d_cv5.csv ; 0.78468 (same as above)
+  - tutorial2/tutorial2e.ipynb
+    - tutorial2d.ipynb からの派生. アルゴリズムを RandomForestClassifier から SVM に変えた
+    - my_submission2e.csv ; 0.76076
+    - my_submission2e_cv3 ; 0.76076
 - scripts
   - show_data.py ; draw some graphs
 
