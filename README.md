@@ -36,7 +36,10 @@ Codes for Kaggle/Titanic
     - cross_val_score のテスト
   - tutorial2/tutorial2b.ipynb
     - SelectKBest を使ってパラメタを絞り込んだ. score ; 0.77511
-
+  - tutorial2/tutorial2c.ipynb
+    - tutorial2.ipynb から派生
+    - tutorial2.ipynb で効果の低かった特徴量 (Cabin, Embarked) を外す
+    - cv=3 と cv=5 でトライ → 結果はいずれも 0.77511
 - scripts
   - show_data.py ; draw some graphs
 
