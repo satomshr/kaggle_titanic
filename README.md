@@ -31,6 +31,7 @@ Codes for Kaggle/Titanic
     - 結果
       - 固定パラメタで RandomForestClassifier ; 0.77990
       - グリッドサーチ ; 0.77511 (何故だ!)
+      - グリッドサーチで cv=5 にする ; 0.77990 (なかなか向上しない)
   - tutorial2/tutorial2a.ipynb
     - cross_val_score のテスト
   - tutorial2/tutorial2b.ipynb
