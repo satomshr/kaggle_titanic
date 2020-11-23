@@ -40,6 +40,13 @@ Codes for Kaggle/Titanic
     - tutorial2.ipynb から派生
     - tutorial2.ipynb で効果の低かった特徴量 (Cabin, Embarked) を外す
     - cv=3 と cv=5 でトライ → 結果はいずれも 0.77511
+  - tutorial2/tutorial2d.ipynb
+    - tutorial2c.ipynb から派生
+    - Cabin と Embarked は元に戻す
+    - 苦し紛れに, "Family_Size" = "SibSp" + "Parch" + 1 を特徴量として設定
+    - mysubmission2d.csv ; 0.78468 (2839 / 16829)
+    - mysubmission2d_cv3.csv ; 0.78468 (same as above)
+    - mysubmission2d_cv5.csv ; 0.78468 (same as above)
 - scripts
   - show_data.py ; draw some graphs
 
