@@ -51,6 +51,14 @@ Codes for Kaggle/Titanic
     - tutorial2d.ipynb からの派生. アルゴリズムを RandomForestClassifier から SVM に変えた
     - my_submission2e.csv ; 0.76076
     - my_submission2e_cv3 ; 0.76076
+  - tutorial2/tutorial2f.ipynb
+    - tutorial2d.ipynb の派生
+    - 影響の小さい特徴量を drop する
+      - ["Cabin_Cap_A", "Cabin_Cap_G", "Cabin_Cap_T", "Cabin_Cap_F"]
+        - 0.77511 だった
+      - ["Cabin_Cap_A", "Cabin_Cap_G", "Cabin_Cap_T", "Cabin_Cap_F", "Cabin_Cap_B", "Embarked_Q"]
+        - 0.77511 だった
+        - 各特徴量の影響度のグラフが大きく変わった
 - scripts
   - show_data.py ; draw some graphs
 
