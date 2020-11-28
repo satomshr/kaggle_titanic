@@ -47,6 +47,10 @@ Codes for Kaggle/Titanic
     - my_submission2d.csv ; 0.78468 (2839 / 16829)
     - my_submission2d_cv3.csv ; 0.78468 (same as above)
     - my_submission2d_cv5.csv ; 0.78468 (same as above)
+    - cv5 において
+      - Train score: 0.856341189674523
+      - Cross Varidation score: 0.8350072186303434
+      - Best Model Parameter:  {'max_depth': 6, 'max_features': 'auto', 'n_estimators': 10}
   - tutorial2/tutorial2e.ipynb
     - tutorial2d.ipynb からの派生. アルゴリズムを RandomForestClassifier から SVM に変えた
     - my_submission2e.csv ; 0.76076
@@ -59,6 +63,12 @@ Codes for Kaggle/Titanic
       - ["Cabin_Cap_A", "Cabin_Cap_G", "Cabin_Cap_T", "Cabin_Cap_F", "Cabin_Cap_B", "Embarked_Q"]
         - 0.77511 だった
         - 各特徴量の影響度のグラフが大きく変わった
+  -tutorial2/tutorial2g.ipynb
+    - tutorial2d.ipynb の派生. RandomizedSearchCV でハイパーパラメータを探索
+    - Best Model Parameter:  {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'max_features': 10, 'min_samples_leaf': 5, 'min_samples_split': 10, 'n_estimators': 10}
+    - Train score: 0.898989898989899
+    - Cross Varidation score: 0.8406377502981608
+    - my_submission_grid2g_cv5.csv ; 0.78468 (same as "d")
 - scripts
   - show_data.py ; draw some graphs
 
