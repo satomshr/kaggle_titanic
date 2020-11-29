@@ -21,6 +21,15 @@ Codes for Kaggle/Titanic
     - feature_cabin_cap.py ; "Cabin" の頭文字でグルーピング. 生存率の高い記号はあるが, あまりメリハリは無い
   - features_age ; check "Age"
     - "Age" の欠損値の補完方法の検討. "Pclass", "SibSp", "Parch", "Sex" に, 名前から作った敬称 "Title" を加えることで, "Age" の予測精度が上がった
+    - GridSearchCV と RandomizedSearchCV でハイパーパラメータの調整をした
+      - GridSearchCV
+        - Best Model Parameter:  {'max_depth': 8, 'max_features': 'log2', 'n_estimators': 10}
+        - Train score: 0.5209169050766573
+        - Cross Varidation score: 0.4548388971850926
+      - RandomizedSearchCV
+        - Best Model Parameter:  {'bootstrap': True, 'criterion': 'mse', 'max_depth': 6, 'max_features': 9, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 40}
+        - Train score: 0.4946184271369229
+        - Cross Varidation score: 0.4550559006191772
   - tutorial2 ; ここまでの成果を使って, submit 用のデータを作成
     - Fare ; Embarked == S のデータを使って, median で埋める
     - Embarked ; 一番多い S で埋める
@@ -63,12 +72,25 @@ Codes for Kaggle/Titanic
       - ["Cabin_Cap_A", "Cabin_Cap_G", "Cabin_Cap_T", "Cabin_Cap_F", "Cabin_Cap_B", "Embarked_Q"]
         - 0.77511 だった
         - 各特徴量の影響度のグラフが大きく変わった
-  -tutorial2/tutorial2g.ipynb
+  - tutorial2/tutorial2g.ipynb
     - tutorial2d.ipynb の派生. RandomizedSearchCV でハイパーパラメータを探索
     - Best Model Parameter:  {'bootstrap': False, 'criterion': 'entropy', 'max_depth': None, 'max_features': 10, 'min_samples_leaf': 5, 'min_samples_split': 10, 'n_estimators': 10}
     - Train score: 0.898989898989899
     - Cross Varidation score: 0.8406377502981608
     - my_submission_grid2g_cv5.csv ; 0.78468 (same as "d")
+  - tutorial2/tutorial2g2.ipynb
+    - tutorial2g2.ipynb の派生. "Age" の欠損値の推定を, RandomizedSearchCV で得られたハイパーパラメタを使用
+    - Best Model Parameter:  {'bootstrap': True, 'criterion': 'gini', 'max_depth': 10, 'max_features': 10, 'min_samples_leaf': 2, 'min_samples_split': 3, 'n_estimators': 240}
+    - Train score: 0.9102132435465768
+    - Cross Varidation score: 0.8406189190885694
+    - CV スコアは, 1 つ前のほうがちょっと高め
+    - 0.78229 (下がった)
+  - tutorial2/tutorial2g3.ipynb
+    - tutorial2g.ipynb の派生。tutorial2g.ipynb の結果をもとに，もう 1 度 RandomizedSearchCV をして，ハイパーパラメタを改善
+    - Best Model Parameter:  {'n_estimators': 15, 'min_samples_split': 12, 'min_samples_leaf': 6, 'max_features': 12, 'max_depth': 12, 'criterion': 'gini', 'bootstrap': False}
+    - Train score: 0.898989898989899
+    - Cross Varidation score: 0.8473667691921412
+    - my_submission_grid2g3_cv5.csv ; 0.78468 (same as "g" and "d")
 - scripts
   - show_data.py ; draw some graphs
 
