@@ -105,6 +105,15 @@ Codes for Kaggle/Titanic
     - Train score: 0.898989898989899
     - Cross Varidation score: 0.8473667691921412
     - my_submission_grid2g3_cv5.csv ; 0.78468 (same as "g" and "d")
+  - tutorial2/tutorial2g4.ipynb
+    - tutorial2g3.ipynb で得られたハイパーパラメータを用い，特徴量 k=18 で推定
+    - test score ; 0.8372795179210344
+    - score ; 0.7790
+  - tutorial2/tutorial2g5.ipynb
+    - tutorial2g3.ipynb の派生。"Sex_female" を drop して，RandomizeSearchCV をやり直す
+    - Best Model Parameter:  {'n_estimators': 10, 'min_samples_split': 8, 'min_samples_leaf': 6, 'max_features': 14, 'max_depth': None, 'criterion': 'gini', 'bootstrap': False}
+    - Train score: 0.8956228956228957
+    - Cross Varidation score: 0.8451195781809051
 
 | File Name | Train score | CV score | Score |
 | ---- | ---- | ---- | ---- |
@@ -113,6 +122,8 @@ Codes for Kaggle/Titanic
 | tutorial2g (cv=5) | 0.898989898989899 | 0.8406377502981608 | 0.78468 |
 | tutorial2g2 (cv=5) | 0.9102132435465768 | 0.8406189190885694 | 0.78229 |
 | tutorial2g3 (cv=5) | 0.898989898989899 | 0.8473667691921412 | 0.78468 |
+| tutorial2g4 (k=18) |  | 0.8372795179210344 | 0.77990 |
+| tutorial3g5 (cv=5) | 0.8956228956228957 | 0.8451195781809051 | 0.77990 |
 
 - 参考
   - 1 / 418 = 0.0023923
