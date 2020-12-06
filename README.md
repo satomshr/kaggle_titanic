@@ -60,6 +60,20 @@ Codes for Kaggle/Titanic
       - Train score: 0.856341189674523
       - Cross Varidation score: 0.8350072186303434
       - Best Model Parameter:  {'max_depth': 6, 'max_features': 'auto', 'n_estimators': 10}
+  - tutorial2/tutorial2d2.ipynb
+    - tutorial2d.ipynb から派生. ワンホットエンコーディング後に, 'Sex_female' を drop する
+    - my_submission2d2.csv
+      - Train score: 0.8383838383838383
+    - my_submission2d2_cv3.csv
+      - Train score: 0.9001122334455668
+      - Cross Varidation score: 0.8361391694725029
+      - Best Model Parameter:  {'max_depth': 6, 'max_features': None, 'n_estimators': 300} ← 変わらなかった
+      - Score ; 0.77990
+    - my_submission2d2_cv5.csv
+      - Train score: 0.9001122334455668
+      - Cross Varidation score: 0.8338710689849977
+      - Best Model Parameter:  {'max_depth': 6, 'max_features': None, 'n_estimators': 300} ; n_estimators が変わったが, これは cv=3 と同じ
+      - Score ; 0.77990
   - tutorial2/tutorial2e.ipynb
     - tutorial2d.ipynb からの派生. アルゴリズムを RandomForestClassifier から SVM に変えた
     - my_submission2e.csv ; 0.76076
@@ -91,6 +105,18 @@ Codes for Kaggle/Titanic
     - Train score: 0.898989898989899
     - Cross Varidation score: 0.8473667691921412
     - my_submission_grid2g3_cv5.csv ; 0.78468 (same as "g" and "d")
+
+| File Name | Train score | CV score | Score |
+| ---- | ---- | ---- | ---- |
+| tutorial2d (cv=5) | 0.856341189674523 | 0.8350072186303434 | 0.78468 |
+| tutorial2d2 (cv=5) | 0.9001122334455668 | 0.8338710689849977 | 0.77990 |
+| tutorial2g (cv=5) | 0.898989898989899 | 0.8406377502981608 | 0.78468 |
+| tutorial2g2 (cv=5) | 0.9102132435465768 | 0.8406189190885694 | 0.78229 |
+| tutorial2g3 (cv=5) | 0.898989898989899 | 0.8473667691921412 | 0.78468 |
+
+- 参考
+  - 1 / 418 = 0.0023923
+
 - scripts
   - show_data.py ; draw some graphs
 
